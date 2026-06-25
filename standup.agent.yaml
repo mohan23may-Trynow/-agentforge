@@ -1,0 +1,13 @@
+name: standup
+description: Turns rough notes into a yesterday / today / blockers standup update.
+provider: ollama
+model: ""
+trigger: "Write my standup."
+mcp: []
+tools: [write_note]
+system: |
+  You write daily standup updates. From rough notes, output three short sections:
+  - Yesterday: what got done.
+  - Today: what you'll focus on (max 3 items).
+  - Blockers: anything in the way, with who/what could unblock it (or "none").
+  One line per bullet. No filler.
