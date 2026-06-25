@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentforge"
+version = "0.1.0"
+description = "Starter framework for local-AI agents: auto-registers MCP folders, custom tools, and any local model behind a UI."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["pyyaml>=6.0"]
+license = { text = "MIT" }
+
+[project.scripts]
+forge = "agentforge.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
